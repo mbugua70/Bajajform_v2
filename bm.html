@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Report</title>
+
+  <link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+
+	<nav>
+		<div class=" topmenu left_menu">
+
+		</div>
+		<div class=" topmenu centered_menu">
+			SURVEY
+		</div>
+		<div class=" topmenu right_menu">
+    <a href="index.html" ><i class="fa fa-home fa-2x"></i></a>
+    </div>
+		 </nav>
+
+
+ <div class="main_body">
+
+
+  <div class="row parcel_form">
+
+ <div class="row">
+    <div class="col s12 m5">
+      <div class="card-panel  deep-orange darken-3">
+        <span class="white-text">
+          Your Details<br>
+           Name: <span id="rba_name"></span><br>
+           Phone: <span id="rba_phone"></span><br>
+           Region: <span id="rba_region"></span><br>
+
+        </span>
+        <br>
+        <a class="btn btn-small yellow darken-2" href="registration.html">Edit Details</a>
+      </div>
+    </div>
+  </div>
+
+<form id="data_form">
+           <input id="ba_name" name="ba_name"  type="hidden">
+           <input id="ba_phone" name="ba_phone"  type="hidden">
+           <input id="ba_region" name="ba_region"  type="hidden">
+
+
+
+        <!-- insert location details (gps) -->
+          <h1>LOCATION DETAILS</h1>
+
+
+      <div class="input-field col s12">
+          <span>Date</span><br>
+            <input id="sub_1_1" name="sub_1_1" title="Date" type="date">
+
+        </div>
+
+          <div class="input-field col s12">
+          <span>Region</span><br>
+          <select name="sub_1_2" id="sub_1_2" style="display: block;">
+            <option value="">Select your answer</option>
+            <option id="mwanza" value="mwanza">Mwanza</option>
+            <option id="kahama" value="kahama">Kahama</option>
+            <option id="Shinyanga" value="shinyanga">Shinyanga</option>
+            <option id="shinyanga" value="masasi">Shinyanga</option>
+
+          </select>
+        </div>
+
+        <h1>Questionnaire</h1>
+
+        <div class="input-field col s12">
+          <span>1. Are you aware of Boxer 125HD? </span><br>
+          <select name="sub_1_3" id="sub_1_3" style="display: block;">
+            <option value="">Select your answer</option>
+            <option id="yes" value="yes">Yes</option>
+            <option id="no" value="no">No</option>
+          </select>
+        </div>
+
+        <div class="input-field col s12">
+          <span>2. What are you aware of in Boxer 125HD?</span><br>
+            <input id="sub_1_4" name="sub_1_4" title="Boxer 125HD" type="text">
+        </div>
+
+         <div class="input-field col s12">
+          <span>3. What do you like in Boxer 125 HD? </span><br>
+            <input id="sub_1_5" name="sub_1_5" title="Boxer 125HD " type="text">
+        </div>
+
+
+
+        <div class="input-field col s12">
+          <span>4. Did you consider Boxer 125HD while buying?</span><br>
+          <select name="sub_1_6" id="sub_1_6" style="display: block;">
+            <option value="">Select your answer</option>
+            <option id="sub_yes_1" value="yes">Yes</option>
+            <option id="sub_no_1" value="no">No</option>
+          </select>
+        </div>
+
+        <div class="input-field col s12" id="ownerone" style="display: none;">
+          <span>5. If considered (Yes), why didn’t you buy?</span><br>
+            <input id="sub_1_7" name="sub_1_7" title="yes" type="text">
+        </div>
+
+        <div class="input-field col s12" id="ownertwo" style="display: none;">
+          <span>6. If not considered (No), why didn’t you consider?</span><br>
+            <input id="sub_1_8" name="sub_1_8" title="no" type="text">
+        </div>
+
+        <div class="input-field col s12">
+          <span>7. What do you like in your current vehicle/Bike?</span><br>
+            <input id="sub_1_9" name="sub_1_9" title="Vehicle/Bike" type="text">
+        </div>
+
+        <div class="input-field col s12">
+          <span>8. What don't you like in your current vehicle/bike?</span><br>
+            <input id="sub_1_10" name="sub_1_10" title="Vehicle/Bike" type="text">
+        </div>
+
+        <div class="input-field col s12">
+          <span>9. What is the mileage you are getting in the current vehicle/bike?</span><br>
+            <input id="sub_1_11" name="sub_1_11" title="Vehicle/Bike" type="text">
+        </div>
+
+        <div class="input-field col s12">
+          <span>10. According to you , what do you think is the mileage of boxer 125 HD?</span><br>
+            <input id="sub_1_12" name="sub_1_12" title="Vehicle/Bike" type="text">
+        </div>
+
+           <div class="input-field col s12 center_it">
+        <button id="branding_btn" class="btn-large  margin-bottom waves-effect waves-light pick_color" type="button">  Upload Information <i class="fa fa-send"></i></button>
+      </div>
+
+</form>
+
+
+
+
+
+
+  </div>
+
+ </div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/localforage.min.js"></script>
+<script type="text/javascript" src="js/sweet.js"></script>
+<!-- <script type="text/javascript" src="js/index.js"></script> -->
+<script type="text/javascript" src="js/location.js"></script>
+<script type="text/javascript" src="js/display.js"></script>
+
+<script type="text/javascript">
+
+  // unchecked radio button
+$(document).ready(function(){
+  $('.row-checked input[type="radio"]').click(function(){
+    var parentDiv = $(this).closest('.row-checked');
+    var name = $(this).attr('name');
+    parentDiv.find('input[type="radio"]').each(function(){
+      if($(this).attr('name') !== name) {
+        $(this).prop('checked', false);
+      }
+    });
+  });
+});
+
+
+app.prefill();
+
+
+
+
+
+$('#branding_btn').click(function(e) {
+
+ //alert("hh")
+LINK="https://igurukenya.com/SKOPE/cng/scripts/";
+//LINK="scripts/";
+
+ if (validateForm4 ())
+ {
+
+ serialized=$("#data_form").serialize();
+
+    $.ajax({
+        type:'POST',
+        url: LINK+'BM.php',
+        data:serialized,
+
+        beforeSend: function() {
+      $("#branding_btn").html('<i class="fa fa-spinner fa-spin fa-3x"></i> Uploading...');
+        console.log("Matana");
+    },
+
+        dataType: 'json',
+        success:function(data){
+
+          res=data.response;
+          if (res=="success") {
+             $("#branding_btn").html('<i class="fa fa-check-circle fa-3x"></i> Upload Details');
+          swal({
+      title: "Sent Successfully",
+      text: "Thank You",
+      icon: "success",
+      });
+
+          setTimeout(function(e){
+            $('#data_form').trigger("reset");
+            //$("#channel").val(channel)
+       //     $("#date").val(tarehe)
+
+          }, 2000)
+          }
+          else{
+            console.log(data)
+          }
+
+
+        },
+        error: function(data){
+            console.log(data);
+            swal({
+            title: "Network Error, Please try again",
+            text: "",
+            icon: "error",
+            });
+            $("#branding_btn").html('<i class="fa fa-upload fa-3x"></i> Upload');
+        }
+    });
+
+ }
+
+
+
+    e.preventDefault();
+
+});
+
+
+function validateForm4 ()
+    {
+        var shouldProceed=true;
+        jina = $('#sub_1_4').val();
+        tarehe = $('#sub_1_2').val();
+         if(!tarehe)
+        {
+             app.appNotifier("Tafadhali Weka Tarehe");
+             $('#sub_1_2').focus();
+             shouldProceed=false;
+        }
+        if(!jina)
+        {
+             app.appNotifier("Tafadhali Weka Jina");
+             $('#sub_1_4').focus();
+             shouldProceed=false;
+        }
+
+        return shouldProceed;
+    }
+
+</script>
+</body>
+</html>
